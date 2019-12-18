@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_main">
+                <button class="header-btn" type="button">
+                    <span></span>
+                </button>
+                <a href="#" class="header_logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="98" height="29" viewBox="0 0 98 29">
+                        <image id="logo_1" width="98" height="29" xlink:href="data:img/png;base64,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" />
+                    </svg>
+                </a>
+                <a href="tel:+78008234888" class="tel"><i class="icon fas fa-phone"></i> +7 (800) 823 48 88</a>
+                <a href="#" class="br_logo"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="154" height="45" viewBox="0 0 154 45">
+                        <image width="154" height="45" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJoAAAAtCAYAAABWMHLaAAAIQ0lEQVR4nO2d228UVRzHv7s7pe32SguFtiBELgKKIOINAS+YGMX4YHz079P44IsXBNF4AxREgiKKykWxtEApbYFS2m53zDGfkxwm27qznRk67XyTTWkpM3PO+c7v+j2HnO/770h6RFKXpAZJ05KmJPmScqoOucDvjkm6JOmcpN8kDXDNuFAnaY2kVyTtk7RRUknSPUmTkgoh7ptnLGYe7kq6KekvST9JOivpIj/PEAKepCclPSupW1KTQ7SwsGQzBL0t6W9JGyStlnSaRRqPaXEMOdokbZb0kqTOiK5r5mJI0j+SHmIs30s6I2k0onssChiirZK0TtLyiAdsLMxOSU9JOirpY0knJN2JaWI9LJsX4TULWPoOrOQOSeslfSrpG0nDEd5rQcNjsm5IWiKpnre4XMOgfb42cK1GPmaRVkLkXkmf40qjhI+7Nlb0FC9OiXH4Vd7Hd776kKyZZzfz1ILFNOPpkdQq6bCkq4uXPtXDTOBJYhkbo5VqdJ3TLFALC7EGcuVwO/u5x4SkzySNRDgO6+JO4p67nTgrzEtjiVlmbpZCro0QzljMFcSCBebqEHFchllgJvNr4qdWJm+aCVSIZMB3FqiBhX4Ut/k41zaLtlfSIDHcsQjjnDJEO00SUnSIVq1FC46jwHOb0GILz76D+M9Y6hd5IY1H+JIXKMMMMES7QFZVcIL5MIvjLpK4hnGdRyT9KultFqkREpoFuk6AHRXRfLLLIT75wDPVCjM/P/NSXMI978NqF0k8TGZ9nmy0lpBjUcDDepUiHuw4JLrpLPYLEK2XLNckCH0Ru1CLqBZ8is9VkplpxvAyL5OxeE9gtUeIdTNUQD7mSTFu8oCkD7AMFquJfXpDuOcHjVFiywN4AAszhq2SlqVkHA8EcRNNZJg/SPrRsV7tZIa9WIi0wFjoX6ijWS+wnGSnPWRheFEhCaIZXCFeu8z3RRKGZZRU0gJjfa8xFlvWaGccrWSlGSogKaKNsTD9xGx5alTFlFkBW68bdOIxG6s1ZUSbGUkRbZIYZ8RxOUtYmKSeISqUSHbcdlp9SseSGJKaGJ8Mt96xYNN80gYP69XsPPeU04nIUAFJEc3GZKu4p0/P814MpZW40UzW3MN9Jija3o5ZoZJqJEW0bsoZa/h+gjhnOGWLkydT3uwoRIbJrIez7sDMSIJopr/5HB+rEBml0t6fssUxPc/d1M0s+ugODEbQiViwiJtoBboApqG+3SnOXqP11Z8ii7aWcezHqllcpLaWNdZnQZTaLYscwXIHerS3aD818fe3UFmcxQpEeV+rRytgXeaSbOS4TiOx5WuSXueFsS/ogDOWuHR2CwIeytQGMsI8mVOY7Mm6izzXaCJYNj3AXSh4rcscRy1ymEZ0VIlAHkLYhKPVUQpPh7Dcrn7NY17MWLbh+tc5ycwAEqFjiAQytzkLPKyNVdhaPZqNm6pZoCDR2tBsreVjywD9LMp7kG0ownHkef5nJO1hPLYhXq5B7uSOpxNXucLRoBnlyUeS3kVomZU1/gceUpc9pOt1ATVHmIZ3jusVsS5uxd9ncY6h3YpaAl3AVW/Hva2eo9zJjju46UaQtx9Z+onMklUHu2dgkxNDxQErja6LseVUh/VcyveVSBIFbMG2k08mDaoCHgH5ZQjXMAeLVnJk4DaIbsIF5amhPU1sdpT7RuVybA+yDznSWqfzUG0c6I617FjEeoSOtmlex/X3kQAcQjSQYRZ4KGFvONvtppwYrRqi2d+ZdPZR2sB8A7uGmomh9nBP4+YOQowoMA1xjxL7reS5pmokmkvQZmRAj2H521Bs7GUc5iX6kIQgwwzw2DZ22omrynOwaOMQrcji7ODN38nidBFDNUOMUVo3c0WZ691iLEsci1RLrOY7G1saifl2M5ZdyILa+fNN6oJHsu13FfEfhzwC2+D2tzALY8kYrFmZrW+/0wEYgGCduJ6tFHKvQIy5ljksmYKqiihwB4vfT3HWvBxvEAvmeZleIPwYyZKD+5CHYzkvxtR8HLJdZ3FMnPMqFqITop3nd6Is3MYBHz3dJ0xeB1vu6snWTY3tO8YzNs/HkjSMlywk0escx2p9gQTaZqAbiXm65te8zAqfsRwk6ShDvHWECi3z+NkfJMpJqTeMNTjuVNFFwL6eJCFNytQ+4rFTjvVqh2jdKZOmxw0b65aSVIT2YdFsKcBW8ztSRrQy8VqfEw/mSBC6UrbZJgmUkibabUjmFjgbcTdpswKTjGeS722vtZjtG7gPdtd/Yq5TmNAJZ3HEAhVStLfTwpWjW+Ri7EakHkkSrZFiZ1BrP5nCvQNeYDOK73RFsgZ7BSRFtBx1p97AIXn3qFNNzvJv5yvygfkLc0TWokOSu6B6UFes4mclstGhbFPHwkdSRFtKr3Cno664QoFzMKXb7jKEQBxS7iBWcPrOfg5ltjiHBPpa5nIWPqy+vhDQidmANkwG5TuiwbxzOqI5D+1N1A5FfteKIM/QCE8jahVWLkoYoj1MgN7inPhYiysrOyclWpnQJuTV25z2jFE4fEt1/XxK3aZ9ATOiVQm7Z2CLs2dgqkaZUNnZCNKGOLDHOcdWBP72vLRTKT+v3wuEHoWU1gQTgcc5s887fbqwu6AsXFfSGGjF+MhovpL0PkqHOE56TBJ1Thcgl5FsdtiTp+1Z+lFi2jlF6AKbUg5zKF9c/7FFUsgF6mZlJwTIyFYBHs3hi5Ci2SGIatgFZcslY6g0TPP5D7LLk8RkC+F8CiuyHCM0KDt7SDNUgEesZM/mLwb2dYYlmv3cdTa9WJXt1RSeHDQTJqkDHmfuzFj/RNadxi5HvJD0L63IJkoy65PHAAAAAElFTkSuQmCC" />
+                    </svg></a>
+            </div>
+            <div class="header_wrapper">
+                <h2 class="header_title">Дизайн
+                    интерьеров </h2>
+                <p class="header_text">
+                    Воплотим в жизнь интерьер, который будет радовать лаконичностью и уютом.
+                </p>
+                <button class="btn btn_header" type="button">заказать дизайн
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="10px" class="arrow">
+                        <image x="0px" y="0px" width="40px" height="10px" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAKCAQAAABsk9TbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjCx0TNh7k1MzgAAAAkklEQVQoz63RIRIBYQDF8f+3tig7BIHADURpqwsoruEKquII0u64gktQVGPGJk1gxjD8BUf4vvf6L7yHJOhc3TsUScHhwJ26tUgFYsfKjwvJmTLhxZeYtDhzJWNJE2zoI0aBgTfQBi45FSXPKA4CN3qUyCbVhpkrtbZIw3VdqwdHqV6eqSfHIlnkev/ceVBzBPgB0B8Q3x58iV0AAAAASUVORK5CYII=" />
+                    </svg></button>
+            </div>
+            <ul class="header_socials">
+                <li class="social_link"><a href="#"><i class="fab fa-vk"></i></a></li>
+                <li class="social_link"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="social_link"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <div class="btn_wrapper_header">
+                <button type="button" class="btn_slider"></button>
+                <button type="button" class="btn_slider"></button>
+                <button type="button" class="btn_slider"></button>
+                <button type="button" class="btn_slider"></button>
+            </div>
+            <div class="border_content">
+                <div class="line_border"></div>
+                <div class="line_border"></div>
+                <div class="line_border"></div>
+                <div class="line_border"></div>
+            </div>
+        </div>
+        <div class="header_bg">
+        </div>
+        <div class="header_bg_img">
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="82" viewBox="0 0 20 82" class="arrow-adaptive">
+            <image id="Arrow" width="20" height="82" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAABSCAYAAABUiPR8AAAB/ElEQVRYhe2ZWU8UQRSFv55FGAIoCgYQdYgxhJhgwv//E7wYlqCZoHELcdjUYek2h5xKinEW0EduJZXuqu773aXu06miqipGjBawCqwBK8AZsAXs+f2q37Q2igY0gceGaS4D83ZUDDIYB6wD08AUUAKV32eAxr8ANR7YuPTUemKY7W2Al55pXHkOLP44YJUB0vryf4CDHIwcdwWOHQEMYAADGMAABjCAAQxgAAMYwAAG8N4DAxjAAN52NCyLNgyXNniR2RbZTOvakECkehYCPbFIq/dfwA8/h43kJNcSZ80pBXkLPPKHI+Aj8MHQ30DP2it+au/U+1g1liz9DPgp4BtvnlubnrXRe++duxRJPj3zxIrxa2ATWAQOk3TcdMqTVoEV3YkBTQPLLFL99xB4Aawbpr2WIDsKFZizZi2N+pXTOvU6pVtzVMt2JLH8qfdVgq6k+7YLugC8dC108p+BY3tOjmT0zc9pq/BTLoH2OwJOON2W67EBPHdUvSyyWiY7pzap2+k+sAt8bdio13dZoF5csvcq060LR9z0wX1xV6hsHXH6byuS9t92K6x6XWbAuh12HJWASlcO/rogUCTqRXnUDzptnaQOTCkKqhQPgG33azcHDLxxMOw6BXdAuk/RWv35Dvjk1roxhgET9LsjU92UrvYUXeqAm1I+8AcxK5Aq4+81vgAAAABJRU5ErkJggg==" />
+        </svg>
+
+    </header>
+
+    <main>
+        <section class="features">
+            <div class="container">
+                <ul class="features_content">
+                    <li class="features_block">
+                        <span class="features_number">01</span>
+                        <h2 class="features_title">Берем весь ремонт на себя</h2>
+                        <p class="features_text">Заботы по дизайну и отделке помещения возьмем на себя, останется дождаться завершения работ и наслаждаться результатом</p>
+                    </li>
+                    <li class="features_block">
+                        <span class="features_number">02</span>
+                        <h2 class="features_title">Мы - профессионалы своего дела</h2>
+                        <p class="features_text">Наши дизайнеры постоянно повышают квалификацию, посещеют курсы и тренинги а студия уже реализовала свыше 1000 дизайн-проектов</p>
+                    </li>
+                    <li class="features_block">
+                        <span class="features_number">03</span>
+                        <h2 class="features_title">Наши проекты
+                            индивидуальны</h2>
+                        <p class="features_text">Каждый, созданный студией, интерьер - индивидуальное и максимально продуманное решение для каждого вида помещения</p>
+                    </li>
+                    <li class="features_block">
+                        <span class="features_number">04</span>
+                        <h2 class="features_title">Рабoтаем на выгодных
+                            условиях</h2>
+                        <p class="features_text">Ценовая политика студии очень лояльна, мы осуществляем контроль всего процесса работы и получаем результат который делает клиентов счастивыми</p>
+                    </li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="portfolio">
+            <div class="container">
+                <h2 class="portfolio_title">
+                    Портфолио
+                </h2>
+                <ul class="portfolio_projects">
+                    <li class="project_list"><a href="" onclick="return false;" class="link">Все проекты</a></li>
+                    <li class="project_list"><a href="" onclick="return false;" class="link">Дизайн интерьеров</a></li>
+                    <li class="project_list"><a href="" onclick="return false;" class="link">Отделочные роботы</a></li>
+                </ul>
+
+                <ul class="portfolio_design">
+                    <li class="portfolio_works">
+                        <img src="img/portfolio_1.jpg" alt="design" class="portfolio_img">
+                        <div class="portfolio_content">
+                            <h2 class="portfolio_design_title">Дизайн интерьера
+                                гостиной </h2>
+                            <span class="portfolio_design_text">Дизайн интерьера</span>
+
+                        </div>
+                        <a href="#" class="button"> <svg width="30" fill="#fff" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+                                <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 " />
+                            </svg></a>
+                    </li>
+                    <li class="portfolio_works">
+                        <img src="img/portfolio_2.jpg" alt="design" class="portfolio_img">
+                        <div class="portfolio_content">
+                            <h2 class="portfolio_design_title">Дизайн интерьера комнаты</h2>
+                            <span class="portfolio_design_text">Дизайн интерьера</span>
+
+                        </div>
+                        <a href="#" class="button"> <svg width="30" fill="#fff" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+                                <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 " />
+                            </svg></a>
+                    </li>
+                    <li class="portfolio_works">
+                        <img src="img/portfolio_3.jpg" alt="design" class="portfolio_img">
+                        <div class="portfolio_content">
+                            <h2 class="portfolio_design_title">Дизайн столовой
+                                в стиле «Бохо»</h2>
+                            <span class="portfolio_design_text">Дизайн интерьера</span>
+
+                        </div>
+                        <a href="#" class="button"> <svg width="30" fill="#fff" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+                                <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 " />
+                            </svg></a>
+                    </li>
+                    <li class="portfolio_works">
+                        <img src="img/portfolio_4.jpg" alt="design" class="portfolio_img">
+                        <div class="portfolio_content">
+                            <h2 class="portfolio_design_title">Лофт интерьер
+                                для отеля Hiloft</h2>
+                            <span class="portfolio_design_text">Дизайн интерьера</span>
+                        </div>
+                        <a href="#" class="button">
+                            <svg width="30" fill="#fff" version="1.1" id="Capa_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 42 42" style="enable-background:new 0 0 42 42;" xml:space="preserve">
+                                <polygon points="42,20 22,20 22,0 20,0 20,20 0,20 0,22 20,22 20,42 22,42 22,22 42,22 " />
+                            </svg></a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h2 class="services_title">Наши услуги</h2>
+                <div class="services_wrapper">
+                    <ul class="services_content">
+                        <li class="services_list"><a href="" onclick="return false;" class="services_link">Дизайн жилого
+                                помещения</a></li>
+                        <li class="services_list"><a href="" onclick="return false;" class="services_link">Дизайн отельных
+                                комнат
+                            </a></li>
+                        <li class="services_list"><a href="" onclick="return false;" class="services_link">Дизайн коммерческих
+                                объектов</a></li>
+                        <li class="services_list"><a href="" onclick="return false;" class="services_link">Ремонт под ключ</a></li>
+                        <li class="services_list"><a href="" onclick="return false;" class="services_link">Отделочные работы</a></li>
+                        <li class="services_list"><a href="" onclick="return false;" class="services_link">Выезд дизайнера
+                                на дом</a></li>
+                    </ul>
+                    <div class="services_information">
+                        <img src="img/services.jpg" alt="logo" class="services_img">
+                        <div class="services_information_wrapper">
+                            <div class="services_information_wrapper_1">
+                                <h2 class="services_information_title">Дизайн коммерческих объектов</h2>
+                                <p class="services_information_text">Работая с коммерческими объектами, студия изучает целевую аудиторию, создаем коммерческие интерьеры такими, чтобы посетители кафе, бара, гостиницы хотели возвращаться в интерьер снова и снова
+                                </p>
+                            </div>
+                            <div class="services_information_wrapper_2">
+                                <span class="services_project">532 проекта </span>
+                                <button class="btn serv-btn" type="button">консультация</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video">
+            <h2 class="video_title">Video</h2>
+            <div class="container">
+                <a href="#" class="btn-video">
+                    <svg width="23px" fill="#fff" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 41.999 41.999" style="enable-background:new 0 0 41.999 41.999;" xml:space="preserve">
+                        <path d="M36.068,20.176l-29-20C6.761-0.035,6.363-0.057,6.035,0.114C5.706,0.287,5.5,0.627,5.5,0.999v40
+    c0,0.372,0.206,0.713,0.535,0.886c0.146,0.076,0.306,0.114,0.465,0.114c0.199,0,0.397-0.06,0.568-0.177l29-20
+    c0.271-0.187,0.432-0.494,0.432-0.823S36.338,20.363,36.068,20.176z M7.5,39.095V2.904l26.239,18.096L7.5,39.095z" />
+                    </svg>
+                </a>
+                <p class="video_text">О студии дизайна интерьеров BRUME за 2 минуты</p>
+            </div>
+        </section>
+
+        <section class="stages">
+            <div class="container">
+                <h2 class="stages_title">Этапы работы</h2>
+                <ul class="stages_content">
+                    <li class="stages_list">
+                        <div class="stage_number">1
+                            <div class="border"></div>
+                        </div>
+                        <h2 class="stage_subtitle">Консультация</h2>
+                        <p class="stage_text">Обсуждаем задачи и пожелания, предлагаем варианты дизайна интерьера, оговариваем сроки реализации.</p>
+                    </li>
+                    <li class="stages_list">
+                        <div class="stage_number">2
+                            <div class="border">
+                            </div>
+                        </div>
+                        <h2 class="stage_subtitle">Техническое задание</h2>
+                        <p class="stage_text">Составляем техническое задание. Заключаем договор, в котором прописываем все этапы проекта.</p>
+                    </li>
+                    <li class="stages_list">
+                        <div class="stage_number">3
+                            <div class="border"></div>
+                        </div>
+                        <h2 class="stage_subtitle">Замеры и планировка</h2>
+                        <p class="stage_text">Фиксируем размеры стен, окон, плинтусов, дверных проемов для эффективной работы</p>
+                    </li>
+                    <li class="stages_list">
+                        <div class="stage_number">4
+                            <div class="border"></div>
+                        </div>
+                        <h2 class="stage_subtitle">Дизайн-концепция</h2>
+                        <p class="stage_text">Создаем концепцию на основе пожеланий клиента, его образов и ощущений. подбираем мебель.</p>
+                    </li>
+                    <li class="stages_list">
+                        <div class="stage_number">5
+                            <div class="border"></div>
+                        </div>
+                        <h2 class="stage_subtitle">3D Визуализация</h2>
+                        <p class="stage_text">Создаем 3d визуализацию, собираем пакет чертежей соответствующий строительным нормам..</p>
+                    </li>
+                    <li class="stages_list">
+                        <div class="stage_number">6
+                            <div class="border"></div>
+                        </div>
+                        <h2 class="stage_subtitle">Комплектация интерьера</h2>
+                        <p class="stage_text">Подбираем мебель, отделочные материалы, светильники и текстиль. Декорируем интерьер.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="form">
+            <div class="container">
+                <div class="form_wrapper">
+                    <h2 class="form_title">Мечтаете об интерьере от BRUME?</h2>
+                    <p class="form_text">Оставьте контактные данные, менеджер свяжется с вами в течении 15 минут, для уточнения всех деталей.</p>
+                    <form action="#" method="get">
+                        <div class="input_wrapper">
+                            <label>
+                                <input type="text" placeholder="Имя*" name="name" required>
+                                <i class="icons fas fa-user"></i>
+                            </label>
+                        </div>
+                        <div class="input_wrapper">
+                            <label>
+                                <input type="tel" placeholder="Телефон*" name="mobile" required>
+                                <i class="icons fas fa-phone"></i>
+                            </label>
+                        </div>
+                        <div class="input_wrapper">
+                            <label>
+                                <input type="email" placeholder="E-mail" name="email">
+                                <i class="icons fas fa-envelope"></i>
+                            </label>
+                        </div>
+                        <input type="submit" value="Отправить" class="btn formbtn">
+                    </form>
+                    <p class="form_text">Нажимая на кнопку, вы соглашаетесь с условиями обработки персональных данных</p>
+                </div>
+            </div>
+            <div class="form_bg"></div>
+        </section>
+
+        <section class="comments">
+            <div class="container">
+                <h2 class="comments_title">Отзывы наших клиентов</h2>
+                <div class="comments_wrapper">
+                    <h2 class="comments_subtitle">Александра Холодная</h2>
+                    <p class="comments_work">Услуга: интерьер детской</p>
+                    <p class="comments_text">Спасибо студии за замечательный интерьер для моей 4-х летней дочки! Работа прошла быстро и легко, команда выполнила все точно в срок, сделали все как мы и хотели.
+                        В следующий раз обратимся к BRUME!</p>
+                    <img src="img/comments_1.png" alt="avatar" class="comments_img">
+                </div>
+                <div class="btn_wrapper_comments">
+                    <button type="button" class="btn_slider"></button>
+                    <button type="button" class="btn_slider"></button>
+                    <button type="button" class="btn_slider"></button>
+                    <button type="button" class="btn_slider"></button>
+                </div>
+            </div>
+            <a href="#" class="comments_link_1"><img src="img/comments_2.png" alt="avatar" width="167"></a>
+            <a href="#" class="comments_link_2"><img src="img/comments_3.png" alt="avatar" width="167"></a>
+        </section>
+        <div class="container">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer_text">BRUME interior, 2017 ©</p>
+            <ul class="footer_content">
+                <li class="footer_links"><a href="#"><svg id="logo" class="footer_logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="40" viewBox="0 0 70 40">
+                            <image width="70" height="40" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAoCAYAAABD0IyuAAAENElEQVRogdWaXaiVRRSGn707eTrIUTI17WAF2Q8Vpyg0owL/IlCCIioiyjCDriKKiCTOhZgFXtSF5EVEYXdJV/1B0E1GQYVRlmU/koKVECnl3zE7b6ztGpqGz8pvvtl8vjCcPWfvmVnz7m/Wetea3ZF0JXAjMEEefgW+Bj7MnKcKC4BngCNAp8Z4GzMOfA9scxu3/+sISY+rORyS9L6kVZImSaKhtqxBGw17Jb0o6bIT2dcF/mjqawWGgOuAF4A3gQsbnLtJzARWAu8Bd1fNOwAc82OUc5S63mIsBd4Abgc+z9yUHaE9GeMFnA5M878B1n/ZiXo2HmA+5jzg6ownJyx6qZNwRfL+DmBJ5sZOA6b6WnXwJzDsti0DVgGD0TyHgVuAd/7eVXN+wNo0SWOSDiZnemPD6+S2xZK2JTbulDQlzFtq4XskTUSL7pc02jJy5kralZDzWOx8S+AVYGM071Q/Zm3Cd8CTfswClgNnUOEwm8Rzrm0CFiXnug3YDHwa2XE5cE5pYkxMbYn689z7twlHkoh5FjBSmhgL/99E/Y7Lg7bhx8SeodLE4BopRt1wWxKTkrl7KUdpYuYm/dx8rAQuSOzr+cWSxJhwXBj1vwB+6dt2/x9mA/OjT+4JR6skMY8A06P+u8ChguvVwcPAnGicZd0/914VFHjjkXA6IGlRywTeQ4m4OyZpaSnlOyzpUUmHk0U3tYiQOZLWJcrc8Fr8OUsihz1213GM8vBmZ/Uq4Gbg2uQz270QlobFk4E58buA32sWqmxvZwLnAovd/8X41m3cFf5nuuJeYF1Ng+WZ72CSzgdsBVZkkmK4BFiTOceJYKTcGpOCE2ObmlJo0c0ejXKR6qEmsdXzpn+g6994KYx5rTY3R6p6GpvCHZ66zIrnMx+z0Mt7dQpVXQ/BFuJmeMHrhgrpvxp4OmMjZ3uxK0c5TzjBo8Cd7m9ifOy667ikKOD1l0v6JPH4Fq6XtCgyzZa0oaJIvrZUuA5thqS3kkW3NHxz0EQbqyioXVSSmPCt7EjIuallxFh7NbFxtQpW8Aw/AesTv7Ci4Hp18VSi4a63gFQ6u34d2B31R/qQ0Z8s7Gbys2jMNSYASxsZrm0DpvtdTptgT8sPkT2mrCf3o1A1HvUHQ7G5RehU6CSVJmbI66gB+4F9LSOmEqWJGfEbyoDfgIOF12wEpYl5wLPagNw77L6hJDGWGjwY9c3XPN+Sff8nShFjOcdLfpEesCm5Tmk1BtwjD2dW8Cc84pzvT4klaZOj979yIXXKwIi5DXjCs+s61TE8LNv99MUV75kCvi8tBLUdA14lHy1kp4m7+4GPTiVSKOhj7Ic4G7yO+kGhNZpEXKzriT17YnZ6eS/3+vQo8KXP9XYis9uMrl/u73VfaTqr2+nVHo4r1Bzna77JfmfS5A8d+wWz3W4NAgcdYPdfpmWbrro9FVcAAAAASUVORK5CYII=" />
+                        </svg>
+                    </a></li>
+                <li class="footer_links"><a href="#"><i class="fab fa-vk"></i></a></li>
+                <li class="footer_links"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="footer_links"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+            <p class="footer_text">HolodnayaDesign</p>
+        </div>
+    </footer>
+</body></html>
